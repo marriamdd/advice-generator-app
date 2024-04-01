@@ -38,7 +38,10 @@ function App() {
             </AdviceContainer>
           </div>
         )}
-        <button onClick={handleClick}>Advice</button>
+
+        <Button onClick={handleClick}>
+          <img src="public/images/Group 3.svg" alt="" />
+        </Button>
       </Main>
     </>
   );
@@ -64,7 +67,18 @@ const Main = styled.main`
     right: 11.5rem;
   }
 `;
-
+const Button = styled.button`
+  width: 64px;
+  height: 64px;
+  background-color: transparent;
+  border: none;
+  position: relative;
+  & > img {
+    position: absolute;
+    top: -3rem;
+    left: 14rem;
+  }
+`;
 const AdviceContainer = styled.div`
   border-radius: 10px;
   background: var(--Dark-Grayish-Blue, #313a48);
