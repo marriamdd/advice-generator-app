@@ -1,21 +1,21 @@
-import { useState } from "react";
+import { useState ,useEffect } from "react";
 import styled from "styled-components";
 import GlobalStyles from "./GlobalStyles";
 
 function App() {
-  const [count, setCount] = useState(0);
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
-
+  useEffect(() => {
+    fetchData();
+  }, []);
   async function fetchData() {
     try {
       const response = await fetch("https://api.adviceslip.com/advice");
       if (!response.ok) {
         throw new Error("Failed to fetch data");
-        console.log("jsonData");
       }
       const jsonData = await response.json();
-      console.log(jsonData);
+
       setData(jsonData);
     } catch (error) {
       setError(error);
@@ -28,8 +28,12 @@ function App() {
     <>
       <GlobalStyles />
       <Main>
+        {data && (
+          <AdviceContainer>
+            <p>{data.slip.advice}</p>
+          </AdviceContainer>
+        )}
         <button onClick={handleClick}>Advice</button>
-        {data && <AdviceContainer><p>{data.slip.advice}</p></AdviceContainer>}
       </Main>
     </>
   );
@@ -38,14 +42,14 @@ function App() {
 const Main = styled.main`
   width: 343px;
   height: 315px;
- 
 `;
 
 const AdviceContainer = styled.p`
-  color: wheat;
-  
-  color: #c8c2c2;
- 
-
+  border-radius: 10px;
+  background: var(--Dark-Grayish-Blue, #313a48);
+  box-shadow: 30px 50px 80px 0px rgba(0, 0, 0, 0.1);
+  width: 343px;
+  height: 315px;
+  flex-shrink: 0;
 `;
 export default App;
