@@ -38,9 +38,9 @@ function App() {
             </AdviceContainer>
           </div>
         )}
-
+        <img src="/images/pattern-divider-mobile.svg" alt="" />
         <Button onClick={handleClick}>
-          <img src="public/images/Group 3.svg" alt="" />
+          <img src="/images/Group 3.svg" alt="" />
         </Button>
       </Main>
     </>
@@ -50,6 +50,7 @@ function App() {
 const Main = styled.main`
   width: 343px;
   height: 315px;
+  position: relative;
   & > div {
     position: relative;
   }
@@ -66,6 +67,11 @@ const Main = styled.main`
     top: 4rem;
     right: 11.5rem;
   }
+  & > img {
+    position: absolute;
+    bottom: 6rem;
+    left: 2.5rem;
+  }
 `;
 const Button = styled.button`
   width: 64px;
@@ -76,7 +82,7 @@ const Button = styled.button`
   & > img {
     position: absolute;
     top: -3rem;
-    left: 14rem;
+    left: 14.5rem;
   }
 `;
 const AdviceContainer = styled.div`
