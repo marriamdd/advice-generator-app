@@ -42,6 +42,12 @@ function App() {
           src="/images/pattern-divider-mobile.svg"
           alt="pattern-divider-mobile"
         />
+        {window.innerWidth >= 768 && (
+          <img
+            src="/images/pattern-divider-desktop.svg"
+            alt="pattern-divider-desktop"
+          />
+        )}
         <Button onClick={handleClick}>
           <img src="/images/Group 3.svg" alt="button-icon" />
         </Button>
