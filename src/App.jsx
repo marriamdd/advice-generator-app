@@ -31,12 +31,12 @@ function App() {
 
       <Main>
         {data && (
-          <>
-            <h1>ADVICE {` # ${data.slip.id}`}</h1>
+          <div>
+            <h1>ADVICE {` #${data.slip.id}`}</h1>
             <AdviceContainer>
               <p>{data.slip.advice}</p>
             </AdviceContainer>
-          </>
+          </div>
         )}
         <button onClick={handleClick}>Advice</button>
       </Main>
@@ -47,7 +47,10 @@ function App() {
 const Main = styled.main`
   width: 343px;
   height: 315px;
-  & > h1 {
+  & > div {
+    position: relative;
+  }
+  & > div h1 {
     color: var(--Neon-Green, #53ffaa);
     text-align: center;
     font-family: Manrope;
@@ -56,6 +59,9 @@ const Main = styled.main`
     font-weight: 800;
     line-height: normal;
     letter-spacing: 3.457px;
+    position: absolute;
+    top: 4rem;
+    right: 11.5rem;
   }
 `;
 
