@@ -51,8 +51,6 @@ function App() {
 }
 
 const Main = styled.main`
-  /* width: 34.3rem;
-  height: 31.5rem; */
   position: relative;
 
   & > div {
@@ -94,10 +92,16 @@ const Button = styled.button`
   background-color: transparent;
   border: none;
   position: relative;
+  :hover {
+    box-shadow: 0 4px 8px hsla(150, 100%, 66%, 0.5);
+  }
   & > img {
     position: absolute;
     top: -3rem;
     left: 14.2rem;
+    border-radius: 50%;
+    cursor: pointer;
+
     @media (min-width: 768px) {
       left: 24.5rem;
     }
