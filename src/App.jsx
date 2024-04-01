@@ -38,9 +38,12 @@ function App() {
             </AdviceContainer>
           </div>
         )}
-        <img src="/images/pattern-divider-mobile.svg" alt="" />
+        <img
+          src="/images/pattern-divider-mobile.svg"
+          alt="pattern-divider-mobile"
+        />
         <Button onClick={handleClick}>
-          <img src="/images/Group 3.svg" alt="" />
+          <img src="/images/Group 3.svg" alt="button-icon" />
         </Button>
       </Main>
     </>
@@ -48,12 +51,14 @@ function App() {
 }
 
 const Main = styled.main`
-  width: 343px;
-  height: 315px;
+  /* width: 34.3rem;
+  height: 31.5rem; */
   position: relative;
+
   & > div {
     position: relative;
   }
+
   & > div h1 {
     color: var(--Neon-Green, #53ffaa);
     text-align: center;
@@ -64,18 +69,25 @@ const Main = styled.main`
     line-height: normal;
     letter-spacing: 3.457px;
     position: absolute;
-    top: 4rem;
+    top: 5rem;
     right: 11.5rem;
+    @media (min-width: 768px) {
+      right: 22.5rem;
+    }
   }
+
   & > img {
     position: absolute;
-    bottom: 6rem;
+    bottom: 12rem;
     left: 2.5rem;
+
     @media (min-width: 768px) {
-      content: url("public/images/pattern-divider-desktop.svg");
+      content: url("public/images/pattern-divider-desktop.svg ");
+      left: 5rem;
     }
   }
 `;
+
 const Button = styled.button`
   width: 64px;
   height: 64px;
@@ -85,7 +97,10 @@ const Button = styled.button`
   & > img {
     position: absolute;
     top: -3rem;
-    left: 14.5rem;
+    left: 14.2rem;
+    @media (min-width: 768px) {
+      left: 24.5rem;
+    }
   }
 `;
 const AdviceContainer = styled.div`
@@ -98,6 +113,11 @@ const AdviceContainer = styled.div`
   align-items: center;
   justify-content: center;
   padding: 7.9rem 2.4rem;
+
+  @media (min-width: 768px) {
+    width: 54rem;
+    height: 33.2rem;
+  }
 
   & > p {
     color: var(--Light-Cyan, #cee3e9);
