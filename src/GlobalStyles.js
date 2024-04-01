@@ -17,6 +17,7 @@ const GlobalStyle = createGlobalStyle`
 
     min-height: 100vh;
     display: flex;
+    align-items: center;
     justify-content: center;
     font-family: "Manrope", sans-serif;
     background: var(--Dark-Blue, #202733);
