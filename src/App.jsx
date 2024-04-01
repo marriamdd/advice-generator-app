@@ -71,6 +71,9 @@ const Main = styled.main`
     position: absolute;
     bottom: 6rem;
     left: 2.5rem;
+    @media (min-width: 768px) {
+      content: url("public/images/pattern-divider-desktop.svg");
+    }
   }
 `;
 const Button = styled.button`
