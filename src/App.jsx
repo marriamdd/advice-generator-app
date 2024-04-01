@@ -80,7 +80,7 @@ const Main = styled.main`
     left: 2.5rem;
 
     @media (min-width: 768px) {
-      content: url("public/images/pattern-divider-desktop.svg ");
+      content: url("/images/pattern-divider-desktop.svg ");
       left: 5rem;
     }
   }
