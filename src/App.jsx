@@ -83,7 +83,7 @@ const Main = styled.main`
   & > img {
     position: absolute;
     bottom: 12rem;
-    left: 2.5rem;
+    left: 2.2rem;
 
     @media (min-width: 768px) {
       content: url("/images/pattern-divider-desktop.svg ");
@@ -104,12 +104,12 @@ const Button = styled.button`
   & > img {
     position: absolute;
     top: -3rem;
-    left: 14.2rem;
+    left: 13.7rem;
     border-radius: 50%;
     cursor: pointer;
 
     @media (min-width: 768px) {
-      left: 24.5rem;
+      left: 24.4rem;
     }
   }
 `;
